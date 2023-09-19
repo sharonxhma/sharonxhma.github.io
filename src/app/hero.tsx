@@ -1,3 +1,6 @@
+"use client";
+import { useRef } from "react";
+import { TypeAnimation } from "react-type-animation";
 import { SocialIcon } from "react-social-icons";
 
 import resolveConfig from "tailwindcss/resolveConfig";
@@ -5,6 +8,9 @@ import tailwindConfig from "../../tailwind.config.js";
 const fullConfig = resolveConfig(tailwindConfig);
 
 export default function Hero() {
+  const TYPE_ANIM_PAUSE = 1000;
+  const CURSOR_CLASS_NAME = "custom-type-animation-cursor";
+
   if (!fullConfig?.theme?.colors) {
     throw new Error("Missing theme colors");
   }
@@ -25,9 +31,11 @@ export default function Hero() {
     "--gradient-color-end": primaryColor,
   };
 
+  const ref = useRef<HTMLSpanElement>(null);
+
   return (
-    <div className="mx-80 my-auto">
-      <div className="-mt-6 flex flex-col items-center">
+    <div className="mx-80 my-auto flex flex-col items-center">
+      <div className="-mt-20 flex flex-col items-center">
         <p
           className="px-4 text-6xl leading-tight font-bold bg-gradient-solid-half"
           style={styleGradient}
@@ -35,18 +43,33 @@ export default function Hero() {
           Sharon Ma
         </p>
 
-        <span className="mt-6 flex flex-col gap-y-6 text-center text-lg font-normal">
-          <p>Lorem, ipsum!</p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-            commodo ligula eget dolor. Aenean massa. Cum soci
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-            commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-            penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-            Donec quam felis, ultricies nec, pellentesque eu, pretium qui
-          </p>
+        <span className="mt-6 flex flex-col leading-loose text-center text-lg font-normal">
+          <TypeAnimation
+            ref={ref}
+            sequence={[
+              `Lorem Ipsum!\nI'm a lorem`,
+              TYPE_ANIM_PAUSE,
+              `Lorem Ipsum!\nI'm a ipsum`,
+              TYPE_ANIM_PAUSE,
+              `Lorem Ipsum!\nI'm a dolor`,
+              TYPE_ANIM_PAUSE,
+              `Lorem Ipsum!\nI'm a lorem / ipsum / dolor.\nI'm currently lorem`,
+              TYPE_ANIM_PAUSE,
+              `Lorem Ipsum!\nI'm a lorem / ipsum / dolor.\nI'm currently ipsum`,
+              TYPE_ANIM_PAUSE,
+              `Lorem Ipsum!\nI'm a lorem / ipsum / dolor.\nI'm currently dolor.`,
+              TYPE_ANIM_PAUSE,
+              `Lorem Ipsum!\nI'm a lorem / ipsum / dolor.\nI'm currently lorem / ipsum / dolor.`,
+              (el) => {
+                if (el) el.classList.remove(CURSOR_CLASS_NAME);
+              },
+            ]}
+            speed={50}
+            deletionSpeed={75}
+            style={{ whiteSpace: "pre-line" }}
+            cursor={false}
+            className={CURSOR_CLASS_NAME}
+          />
         </span>
 
         <div className="mt-12 flex flex-row gap-x-12">
