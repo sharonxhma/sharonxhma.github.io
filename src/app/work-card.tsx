@@ -1,8 +1,8 @@
-import { Card as TremorCard, Divider } from "@tremor/react";
+import { Card, Divider } from "@tremor/react";
 import Image from "next/image";
 import { TechButton, LinkButton } from "./buttons";
 
-export default function Card({
+export default function WorkCard({
   title,
   description,
   contribution,
@@ -22,14 +22,21 @@ export default function Card({
   linkGitHub?: string;
 }) {
   return (
-    <TremorCard className="p-9">
+    <Card className="p-9">
       <div className="flex flex-row gap-x-8">
         <div className="flex flex-col">
           <p className="text-4xl font-bold">{title}</p>
           <p className="mt-5 text-xl font-normal">{description}</p>
           <p className="mt-3.5 text-xl font-normal">{contribution}</p>
         </div>
-        <Image src={`/images/${img}.png`} width={459} height={345} alt={img} />
+        <Image
+          src={`/images/${img}.png`}
+          width="0"
+          height="0"
+          sizes="100vw"
+          className="w-[459px] h-fit"
+          alt={img}
+        />
       </div>
       <div className="mt-7">
         <div className="flex flex-row gap-x-8">
@@ -62,6 +69,6 @@ export default function Card({
           </>
         )}
       </div>
-    </TremorCard>
+    </Card>
   );
 }

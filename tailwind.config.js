@@ -87,7 +87,8 @@ module.exports = {
         "tremor-metric": ["1.875rem", { lineHeight: "2.25rem" }],
       },
       letterSpacing: {
-        extreme: "2.25rem",
+        extreme: "0.3rem",
+        // extreme: "2.25rem",
       },
     },
   },
