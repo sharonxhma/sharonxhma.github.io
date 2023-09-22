@@ -34,10 +34,10 @@ export default function Hero() {
   const ref = useRef<HTMLSpanElement>(null);
 
   return (
-    <div className="mx-80 my-auto flex flex-col items-center">
+    <div className="md:mx-28 lg:mx-52 xl:mx-72 2xl:mx-96 my-auto flex flex-col items-center">
       <div className="-mt-20 flex flex-col items-center">
         <p
-          className="px-4 text-6xl leading-tight font-bold bg-gradient-solid-half"
+          className="px-4 text-5xl sm:text-6xl leading-tight font-bold bg-gradient-solid-half"
           style={styleGradient}
         >
           Sharon Ma

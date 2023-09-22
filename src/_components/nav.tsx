@@ -1,4 +1,4 @@
-export default function Navbar() {
+export default function Nav() {
   return (
     <div className="w-full flex flex-row justify-between">
       <span className="justify-self-start">
