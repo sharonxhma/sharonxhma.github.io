@@ -73,21 +73,27 @@ export default function Hero() {
         </span>
 
         <div className="mt-12 flex flex-row gap-x-12">
-          <SocialIcon
-            network="linkedin"
-            bgColor="black"
-            style={{ height: 25, width: 25 }}
-          />
-          <SocialIcon
-            network="github"
-            bgColor="black"
-            style={{ height: 25, width: 25 }}
-          />
-          <SocialIcon
-            network="email"
-            bgColor="black"
-            style={{ height: 25, width: 25 }}
-          />
+          <span className="transition ease-in-out hover:-translate-y-1">
+            <SocialIcon
+              network="linkedin"
+              bgColor="black"
+              style={{ height: 25, width: 25 }}
+            />
+          </span>
+          <span className="transition ease-in-out hover:-translate-y-1">
+            <SocialIcon
+              network="github"
+              bgColor="black"
+              style={{ height: 25, width: 25 }}
+            />
+          </span>
+          <span className="transition ease-in-out hover:-translate-y-1">
+            <SocialIcon
+              network="email"
+              bgColor="black"
+              style={{ height: 25, width: 25 }}
+            />
+          </span>
         </div>
       </div>
     </div>

@@ -1,7 +1,13 @@
 import "./globals.css";
 import type { Metadata } from "next";
+// import dynamic from "next/dynamic";
 import ScrollParallaxProvider from "./parallax-provider";
 import { Bai_Jamjuree, Manrope } from "next/font/google";
+
+// const ScrollParallaxProvider = dynamic(
+//   () => import("../_components/parallax-provider"),
+//   { ssr: false }
+// );
 
 const baiJamjuree = Bai_Jamjuree({
   subsets: ["latin"],
