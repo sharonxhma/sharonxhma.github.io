@@ -1,20 +1,17 @@
 import Nav from "@/_components/nav";
-import Hero from "./hero";
-import FeaturedWork from "./featured-work";
 import Footer from "@/_components/footer";
 
-export default function Home() {
+export default function About() {
   return (
     <main
       className="p-8 md:p-10 xl:py-12 xl:px-16 font-bai-jamjuree text-black"
       id="top"
     >
-      <div className="flex min-h-screen flex-col items-center">
+      <div className="flex flex-col items-center">
         <Nav />
-        <Hero />
+        <div className="my-24">ABOUT ME PAGE</div>
+        <Footer />
       </div>
-      <FeaturedWork />
-      <Footer />
     </main>
   );
 }

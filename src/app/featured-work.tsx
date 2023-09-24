@@ -6,7 +6,7 @@ export default function FeaturedWork() {
   const title = "FEATURED WORK";
 
   return (
-    <div className="sm:mx-8 md:mx-10 xl:mx-28">
+    <div className="sm:mx-8 md:mx-10 xl:mx-28" id="featured-work">
       <div className="py-9 flex flex-col items-center gap-y-2.5">
         <div className="sm:ml-6 h-6 w-72 sm:w-80 border-y-8 border-primary-500 sm:-skew-x-[10deg]"></div>
         <div className="my-3 text-2xl md:text-3xl xl:text-5xl font-bold tracking-normal md:tracking-widest xl:tracking-extreme text-center flex justify-items-center">

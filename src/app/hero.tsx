@@ -78,6 +78,9 @@ export default function Hero() {
               network="linkedin"
               bgColor="black"
               style={{ height: 25, width: 25 }}
+              url="https://www.linkedin.com/in/sharon-ma-8248a7213/"
+              target="_blank"
+              rel="noopener noreferrer"
             />
           </span>
           <span className="transition ease-in-out hover:-translate-y-1">
@@ -85,6 +88,9 @@ export default function Hero() {
               network="github"
               bgColor="black"
               style={{ height: 25, width: 25 }}
+              url="https://github.com/sharonm6"
+              target="_blank"
+              rel="noopener noreferrer"
             />
           </span>
           <span className="transition ease-in-out hover:-translate-y-1">
