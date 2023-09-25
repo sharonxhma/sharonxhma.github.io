@@ -1,4 +1,5 @@
 "use client";
+import workInfo from "@/_lib/work-info";
 import WorkCard from "./work-card";
 import { Parallax } from "react-scroll-parallax";
 
@@ -26,51 +27,21 @@ export default function FeaturedWork() {
         <div className="sm:mr-6 h-6 w-72 sm:w-80 border-y-8 border-primary-500 sm:-skew-x-[10deg]"></div>
       </div>
       <div className="mt-32 flex flex-col gap-y-36 xl:gap-y-60">
-        <WorkCard
-          title="Loremipsum"
-          description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-          commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-          penatibus et magnis dis parturient montes, nascetur ridiculus mus."
-          contribution="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-          commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-          penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-          Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
-          Nulla consequat massa quis enim"
-          img="placeholder"
-          techStack={["Lorem", "Ipsum", "Dolor", "Amet"]}
-          linkLiveSite="/"
-          linkGitHub="/"
-        />
-        <WorkCard
-          title="Loremipsum"
-          description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-          commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-          penatibus et magnis dis parturient montes, nascetur ridiculus mus."
-          contribution="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-          commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-          penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-          Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
-          Nulla consequat massa quis enim"
-          img="placeholder"
-          techStack={["Lorem", "Ipsum", "Dolor"]}
-          linkLiveSite="/"
-          linkGitHub="/"
-        />
-        <WorkCard
-          title="Loremipsum"
-          description="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-          commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-          penatibus et magnis dis parturient montes, nascetur ridiculus mus."
-          contribution="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean
-          commodo ligula eget dolor. Aenean massa. Cum sociis natoque
-          penatibus et magnis dis parturient montes, nascetur ridiculus mus.
-          Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
-          Nulla consequat massa quis enim"
-          img="placeholder"
-          techStack={["Lorem", "Ipsum", "Dolor", "Amet"]}
-          linkDevPost="/"
-          linkGitHub="/"
-        />
+        {workInfo.featured.map((info, index) => {
+          return (
+            <WorkCard
+              key={index}
+              title={info.title}
+              description={info.description}
+              contribution={info.contribution}
+              img={info.img}
+              techStack={info.techStack}
+              linkLiveSite={info.linkLiveSite}
+              linkDevPost={info.linkDevPost}
+              linkGitHub={info.linkGitHub}
+            />
+          );
+        })}
       </div>
     </div>
   );
