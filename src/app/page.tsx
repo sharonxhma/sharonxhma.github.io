@@ -14,7 +14,9 @@ export default function Home() {
         <Hero />
       </div>
       <FeaturedWork />
-      <Footer />
+      <div className="mt-20 md:mt-28">
+        <Footer />
+      </div>
     </main>
   );
 }

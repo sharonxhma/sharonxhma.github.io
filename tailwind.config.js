@@ -62,6 +62,8 @@ module.exports = {
       backgroundImage: {
         "gradient-solid-half":
           "linear-gradient(to bottom, var(--gradient-color-start), var(--gradient-color-start) 70%, var(--gradient-color-end) 70%)",
+        "gradient-solid-middle":
+          "linear-gradient(to bottom, var(--gradient-color-start), var(--gradient-color-start) 32%, var(--gradient-color-end) 32%, var(--gradient-color-end) 80%, var(--gradient-color-start) 80%)",
       },
       boxShadow: {
         // light
@@ -90,7 +92,6 @@ module.exports = {
       },
       letterSpacing: {
         extreme: "0.3rem",
-        // extreme: "2.25rem",
       },
     },
   },

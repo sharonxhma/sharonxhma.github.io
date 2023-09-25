@@ -1,7 +1,7 @@
 "use client";
 import { useRef } from "react";
 import { TypeAnimation } from "react-type-animation";
-import { SocialIcon } from "react-social-icons";
+import Socials from "@/_components/socials";
 
 import resolveConfig from "tailwindcss/resolveConfig";
 import tailwindConfig from "../../tailwind.config.js";
@@ -17,7 +17,6 @@ export default function Hero() {
 
   type ColorConfig = {
     500?: string;
-    700?: string;
   };
   type ExtendedCSSProperties = React.CSSProperties & {
     "--gradient-color-start"?: string;
@@ -72,35 +71,7 @@ export default function Hero() {
           />
         </span>
 
-        <div className="mt-12 flex flex-row gap-x-12">
-          <span className="transition ease-in-out hover:-translate-y-1">
-            <SocialIcon
-              network="linkedin"
-              bgColor="black"
-              style={{ height: 25, width: 25 }}
-              url="https://www.linkedin.com/in/sharon-ma-8248a7213/"
-              target="_blank"
-              rel="noopener noreferrer"
-            />
-          </span>
-          <span className="transition ease-in-out hover:-translate-y-1">
-            <SocialIcon
-              network="github"
-              bgColor="black"
-              style={{ height: 25, width: 25 }}
-              url="https://github.com/sharonm6"
-              target="_blank"
-              rel="noopener noreferrer"
-            />
-          </span>
-          <span className="transition ease-in-out hover:-translate-y-1">
-            <SocialIcon
-              network="email"
-              bgColor="black"
-              style={{ height: 25, width: 25 }}
-            />
-          </span>
-        </div>
+        <Socials />
       </div>
     </div>
   );
