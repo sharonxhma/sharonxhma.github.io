@@ -25,10 +25,10 @@ export default function About() {
 function Details() {
   return (
     <div className="w-full mt-4 xl:-mt-6 xl:pr-8 xl:pt-16 text-xl text-center flex flex-col gap-y-7">
-      <p>{`Lorem Ipsum!`}</p>
-      <p>{`Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.`}</p>
-      <p>{`Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.`}</p>
-      <p>{`Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt.`}</p>
+      <p>{`Hello there!`}</p>
+      <p>{`I'm a third-year Computer Science major specializing in Intelligent Systems and minoring in Mathematics at the University of California, Irvine.`}</p>
+      <p>{`Since high school, I have been committed to advancing educational experiences, beginning from when I volunteered to teach and develop curriculum for underserved students. This passion led me to assist in courses promoting critical thinking through educational software and to join Daplab as a web development research assistant, where I contributed to the development of a data analytics platform that empowers math educators.`}</p>
+      <p>{`Currently, I'm working on an AI-enhanced platform that aims to support youths' occupational identities, as well as a virtual reality chemistry game exploring the embodied learning of chemical bonds.`}</p>
     </div>
   );
 }

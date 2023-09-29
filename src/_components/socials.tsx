@@ -28,6 +28,7 @@ export default function Socials() {
           network="email"
           bgColor="black"
           style={{ height: 25, width: 25 }}
+          url="mailto:sharonxhma@gmail.com"
         />
       </span>
     </div>

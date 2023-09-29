@@ -50,8 +50,10 @@ export default function WorkCard({
   img,
   techStack,
   linkLiveSite = "",
-  linkDevPost = "",
   linkGitHub = "",
+  linkOthers = [],
+  linkOtherTexts = [],
+  linkOtherIcons = [],
 }: {
   title: string;
   description: string;
@@ -59,8 +61,10 @@ export default function WorkCard({
   img: string;
   techStack: string[];
   linkLiveSite?: string;
-  linkDevPost?: string;
   linkGitHub?: string;
+  linkOthers?: string[];
+  linkOtherTexts?: string[];
+  linkOtherIcons?: string[];
 }) {
   const [isFocusSection, setIsFocusSection] = useState(false);
 
@@ -96,7 +100,7 @@ export default function WorkCard({
               <TechButton text={tech} key={tech} />
             ))}
           </div>
-          {(linkLiveSite || linkDevPost || linkGitHub) && (
+          {(linkLiveSite || linkOthers || linkGitHub) && (
             <>
               <Divider className="my-4 xl:mt-6 rounded-sm h-0.5 bg-gray-200" />
               <div className="mt-0 xl:mt-6 flex flex-row flex-wrap gap-y-4 gap-x-4  md:gap-x-6 xl:gap-x-8">
@@ -107,13 +111,17 @@ export default function WorkCard({
                     url={linkLiveSite}
                   />
                 )}
-                {linkDevPost && (
-                  <LinkButton
-                    text="Visit Devpost"
-                    icon="link"
-                    url={linkDevPost}
-                  />
-                )}
+                {linkOthers &&
+                  linkOthers.map((link, index) => {
+                    return (
+                      <LinkButton
+                        key={index}
+                        text={"Visit " + linkOtherTexts[index]}
+                        icon={linkOtherIcons[index]}
+                        url={link}
+                      />
+                    );
+                  })}
                 {linkGitHub && (
                   <LinkButton
                     text="Visit GitHub"

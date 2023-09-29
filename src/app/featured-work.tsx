@@ -37,8 +37,10 @@ export default function FeaturedWork() {
               img={info.img}
               techStack={info.techStack}
               linkLiveSite={info.linkLiveSite}
-              linkDevPost={info.linkDevPost}
               linkGitHub={info.linkGitHub}
+              linkOthers={info.linkOthers}
+              linkOtherTexts={info.linkOtherTexts}
+              linkOtherIcons={info.linkOtherIcons}
             />
           );
         })}

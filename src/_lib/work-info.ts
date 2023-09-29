@@ -1,33 +1,40 @@
 const allWork: { [key: string]: any } = {
-    "Loremipsum": {
-        title: "Loremipsum",
-        description: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.",
-        contribution: "Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim",
-        img: "placeholder",
-        techStack: ["Lorem", "Ipsum", "Dolor", "Amet"],
-        linkLiveSite: "/",
-        linkDevPost: "",
-        linkGitHub: "/"
+    "careergram": {
+        title: "Careergram",
+        description: "An AI-augmented career exploration platform that aims to spur new insight and decision-making for youth programs to support youths’ occupational identities.",
+        contribution: "Integrated OpenAI's ChatGPT to enable personalized reflection, leveraging AI-powered natural language processing. Converted existing REST API to GraphQL for database management, streamlining data retrieval processes.",
+        img: "careergram",
+        techStack: ["NextJS", "GraphQL", "Prisma", "PlanetScale"],
+        linkLiveSite: "https://tangramuci.vercel.app/",
+        linkGitHub: "",
+        linkOthers: ["https://github.com/Design-and-Partnership-Lab/tangram-demo"],
+        linkOtherTexts: ["Demo GitHub"],
+        linkOtherIcons: ["code"]
     },
-    "Enimminima": {
-        title: "Enimminima",
-        description: "Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? ",
-        contribution: "Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur? Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur",
-        img: "placeholder",
-        techStack: ["Enim", "Minima", "Ut", "Ad"],
-        linkLiveSite: "/",
-        linkDevPost: "",
-        linkGitHub: ""
+    "edsight": {
+        title: "Edsight",
+        description: "A data analytics platform designed to assist educators in improving their teaching pedagogy through data and reflection. It is part of a broader initiative called PMR2 to develop a system to support the implementation of instructional improvement strategies in middle-school mathematics.",
+        contribution: "Built the course settings page, implementing database interactions with CRUD operations and improving the usability of course management features.",
+        img: "edsight",
+        techStack: ["NextJS", "Prisma", "PlanetScale"],
+        linkLiveSite: "https://www.edsight.io/",
+        linkGitHub: "",
+        linkOthers: ["https://www.pmr2.org/"],
+        linkOtherTexts: ["PMR2"],
+        linkOtherIcons: ["link"]
+
     },
-    "Sedperspiciatis": {
-        title: "Sedperspiciatis",
-        description: "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
-        contribution: "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.",
-        img: "placeholder",
-        techStack: ["Sed", "Ut", "Unde", "Omnis"],
-        linkLiveSite: "/",
-        linkDevPost: "",
-        linkGitHub: "/"
+    "happy-home": {
+        title: "Happy Home",
+        description: "A minimalist all-in-one food, water, fitness, and period tracker to aid you in keeping track of your well-being.",
+        contribution: "In 36 hours, conceptualized, designed, and developed a user-first well-being tracker. This mobile application offers seamless, real-time synchronization with a cloud database, complemented by user authentication to ensure data security.",
+        img: "happy-home",
+        techStack: ["Flutter", "Firebase", "Firestore", "Figma"],
+        linkLiveSite: "",
+        linkGitHub: "https://github.com/sharonm6/happy_home",
+        linkOthers: ["https://devpost.com/software/happy-home-hti0z3"],
+        linkOtherTexts: ["Devpost"],
+        linkOtherIcons: ["link"]
     },
     "Veroeos": {
         title: "Veroeos",
@@ -36,13 +43,15 @@ const allWork: { [key: string]: any } = {
         img: "placeholder",
         techStack: ["At", "Vero", "Eos", "Dolor"],
         linkLiveSite: "",
-        linkDevPost: "/",
-        linkGitHub: "/"
+        linkGitHub: "",
+        linkOthers: [],
+        linkOtherTexts: [],
+        linkOtherIcons: []
     }
 }
 
-const featuredKeys = ["Enimminima", "Sedperspiciatis", "Veroeos"]
-const allKeys = ["Veroeos", "Sedperspiciatis", "Loremipsum", "Enimminima"]
+const featuredKeys = ["careergram", "edsight", "happy-home"]
+const allKeys = ["careergram", "edsight", "happy-home"]
 
 const workInfo = {
     featured: featuredKeys.map(key => allWork[key]),

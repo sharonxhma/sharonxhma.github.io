@@ -1,5 +1,5 @@
 "use client";
-import { useRef } from "react";
+import { useState, useEffect, useRef } from "react";
 import { TypeAnimation } from "react-type-animation";
 import Socials from "@/_components/socials";
 
@@ -31,6 +31,18 @@ export default function Hero() {
   };
 
   const ref = useRef<HTMLSpanElement>(null);
+  const [line, setLine] = useState(0);
+  const [scrollFull, setScrollFull] = useState(false);
+
+  useEffect(() => {
+    const detectPageScroll = () => {
+      if (window.scrollY > window.innerHeight) {
+        setScrollFull(true);
+        document.removeEventListener("scroll", detectPageScroll);
+      }
+    };
+    document.addEventListener("scroll", detectPageScroll);
+  }, [scrollFull]);
 
   return (
     <div className="md:mx-28 lg:mx-52 xl:mx-72 2xl:mx-96 my-auto flex flex-col items-center">
@@ -43,34 +55,79 @@ export default function Hero() {
         </p>
 
         <span className="mt-6 flex flex-col leading-loose text-center text-lg font-normal">
-          <TypeAnimation
-            ref={ref}
-            sequence={[
-              `Lorem Ipsum!\nI'm a lorem`,
-              TYPE_ANIM_PAUSE,
-              `Lorem Ipsum!\nI'm a ipsum`,
-              TYPE_ANIM_PAUSE,
-              `Lorem Ipsum!\nI'm a dolor`,
-              TYPE_ANIM_PAUSE,
-              `Lorem Ipsum!\nI'm a lorem / ipsum / dolor.\nI'm currently lorem`,
-              TYPE_ANIM_PAUSE,
-              `Lorem Ipsum!\nI'm a lorem / ipsum / dolor.\nI'm currently ipsum`,
-              TYPE_ANIM_PAUSE,
-              `Lorem Ipsum!\nI'm a lorem / ipsum / dolor.\nI'm currently dolor.`,
-              TYPE_ANIM_PAUSE,
-              `Lorem Ipsum!\nI'm a lorem / ipsum / dolor.\nI'm currently lorem / ipsum / dolor.`,
-              (el) => {
-                if (el) el.classList.remove(CURSOR_CLASS_NAME);
-              },
-            ]}
-            speed={50}
-            deletionSpeed={75}
-            style={{ whiteSpace: "pre-line" }}
-            cursor={false}
-            className={CURSOR_CLASS_NAME}
-          />
+          {scrollFull ? (
+            <>
+              <p>{`Hello there!`}</p>
+              <p>{`I’m a software developer / web development research assistant @ Daplab / third-year computer science major @ UCI.`}</p>
+              <p>{`I’m currently working on an AI-augmented career exploration platform for youths / a virtual reality chemistry game exploring embodied learning of chemical bonds.`}</p>
+            </>
+          ) : (
+            <>
+              <TypeAnimation
+                ref={ref}
+                sequence={[
+                  `Hello there!`,
+                  (el) => {
+                    if (el) {
+                      el.classList.remove(CURSOR_CLASS_NAME);
+                      setLine((prev) => prev + 1);
+                    }
+                  },
+                ]}
+                speed={60}
+                deletionSpeed={80}
+                style={{ whiteSpace: "pre-line" }}
+                cursor={false}
+                className={CURSOR_CLASS_NAME}
+              />
+              {line == 1 && (
+                <TypeAnimation
+                  ref={ref}
+                  sequence={[
+                    `I’m a software developer`,
+                    TYPE_ANIM_PAUSE,
+                    `I’m a web development research assistant @ Daplab`,
+                    TYPE_ANIM_PAUSE,
+                    `I’m a third-year computer science major @ UCI`,
+                    TYPE_ANIM_PAUSE,
+                    `I’m currently working on an AI-augmented career exploration platform for youths`,
+                    TYPE_ANIM_PAUSE,
+                    `I’m currently working on a virtual reality chemistry game exploring embodied learning of chemical bonds`,
+                    TYPE_ANIM_PAUSE,
+                    ``,
+                    (el) => {
+                      if (el) {
+                        el.classList.remove(CURSOR_CLASS_NAME);
+                        setLine((prev) => prev + 1);
+                      }
+                    },
+                  ]}
+                  speed={60}
+                  deletionSpeed={80}
+                  style={{ whiteSpace: "pre-line" }}
+                  cursor={false}
+                  className={CURSOR_CLASS_NAME}
+                />
+              )}
+              {line == 2 && (
+                <TypeAnimation
+                  ref={ref}
+                  sequence={[
+                    `I’m a software developer / web development research assistant @ Daplab / third-year computer science major @ UCI.\nI’m currently working on an AI-augmented career exploration platform for youths / a virtual reality chemistry game exploring embodied learning of chemical bonds.`,
+                    (el) => {
+                      if (el) el.classList.remove(CURSOR_CLASS_NAME);
+                    },
+                  ]}
+                  speed={85}
+                  deletionSpeed={80}
+                  style={{ whiteSpace: "pre-line" }}
+                  cursor={false}
+                  className={CURSOR_CLASS_NAME}
+                />
+              )}
+            </>
+          )}
         </span>
-
         <Socials />
       </div>
     </div>
