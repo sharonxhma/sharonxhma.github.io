@@ -5,7 +5,7 @@ export function TechButton({ text }: { text: string }) {
   return (
     <button
       type="button"
-      className="px-3 xl:px-4 py-2 rounded border-l-[5px]	border-primary-700 bg-lightgrey text-sm font-medium text-primary-700 shadow-sm hover:cursor-auto"
+      className="px-3 xl:px-4 py-2 rounded border-l-[5px]	border-primary-700 bg-lightgrey text-sm md:text-lg font-medium text-primary-700 shadow-sm hover:cursor-auto"
     >
       {text}
     </button>

@@ -36,22 +36,34 @@ const allWork: { [key: string]: any } = {
         linkOtherTexts: ["Devpost"],
         linkOtherIcons: ["link"]
     },
-    "Veroeos": {
-        title: "Veroeos",
-        description: "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident. ",
-        contribution: "Et harum quidem rerum facilis est et expedita distinctio. Nam libero tempore, cum soluta nobis est eligendi optio cumque nihil impedit quo minus id quod maxime placeat facere possimus, omnis voluptas assumenda est, omnis dolor repellendus. Temporibus autem quibusdam et aut officiis debitis aut rerum.",
-        img: "placeholder",
-        techStack: ["At", "Vero", "Eos", "Dolor"],
+    "dag": {
+        title: "Directed Acyclic Graphs",
+        description: "The Human Systems Risk Board (HSRB) at NASA created directed acyclic graphs (DAGs) to communicate the causal flow of risk from spaceflight environmental hazards to health outcomes.",
+        contribution: "Validated expert-drawn DAGs by generating probabilistic graphical models, populated with empirical biological data from the NASA Open Science Data Repository (OSDR). Researched the NoDAG algorithm to support the HSRB in formalizing a shared causal flow model for astronaut medical risks assessment.",
+        img: "dag",
+        techStack: ["R", "Python"],
         linkLiveSite: "",
-        linkGitHub: "",
+        linkGitHub: "https://github.com/dag-ml/nodag",
+        linkOthers: ["https://www.nasa.gov/directorates/esdmd/hhp/human-system-risk-board/", "https://osdr.nasa.gov/"],
+        linkOtherTexts: ["HSRB", "OSDR"],
+        linkOtherIcons: ["link", "link"]
+    },
+    "gan": {
+        title: "GAN Augmentation",
+        description: "Analyzing spaceflight radiation is challenging due to limited available data. We addressed this by augmenting emperical data with synthetic images.",
+        contribution: "Trained a Generative Adversarial Network (GAN) to generate images for NASA dataset hosted on AWS. Assessed the efficacy of the GAN-generated images with a ResNet model, achieving a 78% validation accuracy. Optimized model performance through hyperparameter tuning with sweeps and benchmarked results.",
+        img: "gan",
+        techStack: ["Python", "Pytorch", "Wandb"],
+        linkLiveSite: "",
+        linkGitHub: "https://github.com/UC-Irvine-CS175/final-project-shenanigans",
         linkOthers: [],
         linkOtherTexts: [],
         linkOtherIcons: []
     }
 }
 
-const featuredKeys = ["careergram", "edsight", "happy-home"]
-const allKeys = ["careergram", "edsight", "happy-home"]
+const featuredKeys = ["dag", "careergram", "edsight", "gan", "happy-home"]
+const allKeys = ["dag", "careergram", "edsight", "gan", "happy-home"]
 
 const workInfo = {
     featured: featuredKeys.map(key => allWork[key]),
