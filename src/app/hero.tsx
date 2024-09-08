@@ -58,8 +58,8 @@ export default function Hero() {
           {scrollFull ? (
             <>
               <p>{`Hello there!`}</p>
-              <p>{`I’m a software developer / web development research assistant @ Daplab / third-year computer science major @ UCI.`}</p>
-              <p>{`I’m currently working on an AI-augmented career exploration platform for youths / a virtual reality chemistry game exploring embodied learning of chemical bonds.`}</p>
+              <p>{`I’m a software developer / web development research assistant @ Daplab / Community Outreach Co-Chair @ WICS / fourth-year computer science major @ UCI.`}</p>
+              <p>{`I’m currently working on an AI-augmented career exploration platform for youths.`}</p>
             </>
           ) : (
             <>
@@ -88,11 +88,11 @@ export default function Hero() {
                     TYPE_ANIM_PAUSE,
                     `I’m a web development research assistant @ Daplab`,
                     TYPE_ANIM_PAUSE,
-                    `I’m a third-year computer science major @ UCI`,
+                    `I’m a Community Outreach Co-Chair @ WICS`,
+                    TYPE_ANIM_PAUSE,
+                    `I’m a fourth-year computer science major @ UCI`,
                     TYPE_ANIM_PAUSE,
                     `I’m currently working on an AI-augmented career exploration platform for youths`,
-                    TYPE_ANIM_PAUSE,
-                    `I’m currently working on a virtual reality chemistry game exploring embodied learning of chemical bonds`,
                     TYPE_ANIM_PAUSE,
                     ``,
                     (el) => {
@@ -113,7 +113,7 @@ export default function Hero() {
                 <TypeAnimation
                   ref={ref}
                   sequence={[
-                    `I’m a software developer / web development research assistant @ Daplab / third-year computer science major @ UCI.\nI’m currently working on an AI-augmented career exploration platform for youths / a virtual reality chemistry game exploring embodied learning of chemical bonds.`,
+                    `I’m a software developer / web development research assistant @ Daplab / Community Outreach Co-Chair @ WICS / fourth-year computer science major @ UCI.\nI’m currently working on an AI-augmented career exploration platform for youths.`,
                     (el) => {
                       if (el) el.classList.remove(CURSOR_CLASS_NAME);
                     },

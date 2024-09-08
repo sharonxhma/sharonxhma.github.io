@@ -6,7 +6,7 @@ export default function Footer() {
     <div className="w-full flex flex-row items-center">
       <span className="mx-auto">
         <p className="-mr-11 text-md md:text-lg font-light text-center">
-          Last Updated September 2023
+          Last Updated September 2024
         </p>
       </span>
       <Link

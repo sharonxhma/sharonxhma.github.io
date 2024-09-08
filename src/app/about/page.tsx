@@ -26,9 +26,9 @@ function Details() {
   return (
     <div className="w-full mt-4 xl:-mt-6 xl:pr-8 xl:pt-16 text-xl text-center flex flex-col gap-y-7">
       <p>{`Hello there!`}</p>
-      <p>{`I'm a third-year Computer Science major specializing in Intelligent Systems and minoring in Mathematics at the University of California, Irvine.`}</p>
+      <p>{`I'm a fourth-year Computer Science major specializing in Intelligent Systems at the University of California, Irvine.`}</p>
       <p>{`Since high school, I have been committed to advancing educational experiences, beginning from when I volunteered to teach and develop curriculum for underserved students. This passion led me to assist in courses promoting critical thinking through educational software and to join Daplab as a web development research assistant, where I contributed to the development of a data analytics platform that empowers math educators.`}</p>
-      <p>{`Currently, I'm working on an AI-enhanced platform that aims to support youths' occupational identities, as well as a virtual reality chemistry game exploring the embodied learning of chemical bonds.`}</p>
+      <p>{`Currently, I'm a Community Outreach Co-Chair at WICS and working on an AI-enhanced platform that aims to support youths' occupational identities.`}</p>
     </div>
   );
 }

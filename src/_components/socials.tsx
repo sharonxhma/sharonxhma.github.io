@@ -8,7 +8,7 @@ export default function Socials() {
           network="linkedin"
           bgColor="black"
           style={{ height: 25, width: 25 }}
-          url="https://www.linkedin.com/in/sharon-ma-8248a7213/"
+          url="https://www.linkedin.com/in/sharonxhma/"
           target="_blank"
           rel="noopener noreferrer"
         />
