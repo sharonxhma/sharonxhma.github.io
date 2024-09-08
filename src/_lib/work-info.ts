@@ -62,7 +62,7 @@ const allWork: { [key: string]: any } = {
     }
 }
 
-const featuredKeys = ["dag", "careergram", "edsight", "gan", "happy-home"]
+const featuredKeys = ["careergram", "edsight", "gan", "happy-home", "dag"]
 const allKeys = ["dag", "careergram", "edsight", "gan", "happy-home"]
 
 const workInfo = {
